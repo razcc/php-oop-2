@@ -1,9 +1,11 @@
 <?php
     include __DIR__ . '/classi/cibo.php';
 
-    $croccantini = new cibo ("royalCanin", "Royal Canin", "Cane", "10£", "10kg", "riso, pesce");
+    $arrayCibo = [
+        'croccantiniRoyal' => new cibo ("royalCanin", "Royal Canin", "Cane", 49.99, 545, "prosciutto, riso"),
+        'croccantiniAlmo' => new cibo ("almoNature", "Almo Nature", "Cane", 44.99, 600, "manzo, cereali")
 
-    var_dump($croccantini);
+    ];
  ?>
 
 <!DOCTYPE html>
@@ -34,15 +36,19 @@
 
         <div class="row">
         
-            <div class="col-4 border">
-                <?php foreach ($croccantini as $elem) { ?>
-                    <div>
-                        <?php echo $elem; ?>
-                    </div>
-                
+            
+                <?php foreach ($arrayCibo as $key => $elem) { ?>
+                    <div class="col-4 border">
+                        <?php   foreach($elem as $value){?>
+                            <div>
+                                <?php echo $value; ?> 
+                            </div>
+                           
+                        <?php } ?>  
+                    </div>    
                 <?php } ?>
 
-            </div>
+            
 
             
         </div>
