@@ -5,11 +5,22 @@
         public $peso;
         public $ingredienti;
 
-        public function __construct($immagine, $nomeProdotto, $categoria, $prezzo,$peso, $ingredienti)
-        {
+        public function __construct(
+            $immagine,
+            $nomeProdotto,
+            $categoria,
+            $prezzo,
+            $peso,
+            $ingredienti
+            ) {
             $this -> peso = $peso;
             $this -> ingredienti = $ingredienti;
-            parent::__construct($immagine, $nomeProdotto, $categoria, $prezzo);
+            parent::__construct(
+                $immagine,
+                $nomeProdotto,
+                $categoria,
+                $prezzo
+            );
 
         }
 
