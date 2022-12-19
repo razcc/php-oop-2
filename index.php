@@ -1,4 +1,10 @@
-<?php ?>
+<?php
+    include __DIR__ . '/classi/cibo.php';
+
+    $croccantini = new cibo ("img", "Royal Canin", "Cane", "10£", "10kg", "riso, pesce");
+
+    var_dump($croccantini);
+ ?>
 
 <!DOCTYPE html>
 <html lang='en'>
