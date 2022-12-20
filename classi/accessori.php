@@ -6,23 +6,24 @@ class accessori extends prodotto{
     public $dimensioni;
 
     public function __construct(
-    $immagine,
-    $nomeProdotto,
-    $categoria,
-    $prezzo,
-    $materiale,
-    $dimensioni
-    ){
+        // Info padre
+        String $nomeProdotto,
+        Float $prezzo,
+        String $immagine,
+        Bool $is_available,
+        categorie $categoria,
+
+        // Nuove info
+        String $materiale,
+        String $dimensioni
+    )
+    {
+        parent:: __construct($immagine, $nomeProdotto, $categoria, $prezzo, $is_available);
+
         $this -> materiale = $materiale;
         $this -> dimensioni = $dimensioni;
-
-        parent ::__construct(
-            $immagine,
-            $nomeProdotto,
-            $categoria,
-            $prezzo
-        );
-    }   
+        
+    }
 }
 
 
